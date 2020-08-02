@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+
+import Application from './combo/Application';
 
 export default class App extends Component {
     componentDidMount() {
@@ -8,9 +9,7 @@ export default class App extends Component {
 
     render() {
         return (
-                <View>
-                    <Text>Hello world</Text>
-                </View>
+               <Application />
         );
     }
 }
