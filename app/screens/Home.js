@@ -1,14 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
-import { AppHeader } from '../combo';
 import { Page, Button } from '../common';
 
-export const Home = () => (
+export const Home = ({ navigation }) => (
     <View>
         <Page>
-            <AppHeader/>
             <View style={{ flexDirection: 'row' }}>
-                <Button title="Books"/>
+                <Button title="Books" onPress={() => navigation.navigate('BooksList')}/>
                 <Button title="Authors"/>
             </View>
         </Page>

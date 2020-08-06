@@ -5,6 +5,11 @@ export const appHeader = EStyleSheet.create({
         backgroundColor: '$primaryDark',
         height: 70,
     },
+    title: {
+        color: '$primaryLight',
+        fontWeight: '300',
+        fontSize: 28,
+    },
 });
 
 export const buttons = EStyleSheet.create({
@@ -24,11 +29,21 @@ export const buttons = EStyleSheet.create({
 export const text = EStyleSheet.create({
     title: {
         color: '$primaryDark',
-        fontSize: 30,
+        fontSize: 24,
         fontWeight: '600'
     },
     subtitle: {
         color: '$primaryDark',
-        fontSize: 22,
+        fontSize: 18,
+    },
+});
+
+export const separator = EStyleSheet.create({
+    listSeparator: {
+        backgroundColor: '$secondaryDark',
+        height: 2,
+        marginVertical: 1,
+        width: '92%',
+        alignSelf: 'center',
     },
 });
