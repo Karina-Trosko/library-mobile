@@ -1,6 +1,6 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { BooksList, Home } from '../screens';
+import { BooksList, Home, BookDetails } from '../screens';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { appHeader } from '../styles';
 
@@ -15,6 +15,12 @@ const AppNavigator = createStackNavigator({
     screen: BooksList,
     navigationOptions: {
       title: 'BooksList',
+    }
+  },
+  BookDetails: {
+    screen: BookDetails,
+    navigationOptions: {
+      title: 'BookDetails',
     }
   },
 },

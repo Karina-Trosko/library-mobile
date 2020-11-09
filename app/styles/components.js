@@ -36,6 +36,15 @@ export const text = EStyleSheet.create({
         color: '$primaryDark',
         fontSize: 18,
     },
+    bigTitle: {
+        color: '$primaryDark',
+        fontWeight: '600',
+        fontSize: 42,
+    },
+    bigSubtitle: {
+        color: '$primaryDark',
+        fontSize: 26,
+    },
 });
 
 export const separator = EStyleSheet.create({
