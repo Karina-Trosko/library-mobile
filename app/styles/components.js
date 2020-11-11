@@ -19,10 +19,11 @@ export const buttons = EStyleSheet.create({
         paddingVertical: 8,
         margin: 10,
         borderRadius: 10,
-        flex: 1,
+        // flex: 1,
     },
     text:{
         color: '$primaryLight',
+        textAlign: 'center',
     },
 });
 
@@ -45,6 +46,19 @@ export const text = EStyleSheet.create({
         color: '$primaryDark',
         fontSize: 26,
     },
+    notification: {
+        padding: 20,
+        backgroundColor: '$secondaryDark',
+        opacity: 0.5,
+        borderTopWidth: 2,
+        borderTopColor: '$secondaryDark',
+    },
+    lightBlue: {
+        color: '$secondaryLight',
+    },
+    lightRed: {
+        color: '$secondaryDark',
+    },
 });
 
 export const separator = EStyleSheet.create({
@@ -54,5 +68,8 @@ export const separator = EStyleSheet.create({
         marginVertical: 1,
         width: '92%',
         alignSelf: 'center',
+    },
+    primaryLight: {
+        backgroundColor: '$primaryLight',
     },
 });

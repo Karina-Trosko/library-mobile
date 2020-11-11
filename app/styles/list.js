@@ -10,6 +10,16 @@ export const list = EStyleSheet.create({
         paddingVertical: 8,
     },
     listContainer: {
-        height: windowsHeight,
+        height: '100%',
+        backgroundColor: '$white',
+    },
+});
+
+export const listInfo = EStyleSheet.create({
+    item: {
+        marginHorizontal: 15,
+        paddingVertical: 15,
+        paddingHorizontal: 5,
+        flexDirection: 'row'
     },
 });

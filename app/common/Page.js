@@ -12,13 +12,16 @@ export class Page extends Component {
     render() {
         return (
             <SafeAreaView>
-                <StatusBar barStyle="light-content" backgroundColor={EStyleSheet.value('$primaryDark')}/>
-                <KeyboardAwareScrollView style={list.listContainer}>
-                <View style={{ backgroundColor: EStyleSheet.value('$white') }}>
-                    {this.props.children}
+                <StatusBar barStyle="light-content" backgroundColor={EStyleSheet.value('$primaryDark')} />
+                <View style={list.listContainer}>
+                    <KeyboardAwareScrollView>
+                        <View>
+                            {this.props.children}
+                        </View>
+                    </KeyboardAwareScrollView>
+                    {this.props.footer}
                 </View>
-                </KeyboardAwareScrollView>
-           </SafeAreaView>
+            </SafeAreaView>
         );
     }
-}
+} 
