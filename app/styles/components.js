@@ -48,8 +48,7 @@ export const text = EStyleSheet.create({
     },
     notification: {
         padding: 20,
-        backgroundColor: '$secondaryDark',
-        opacity: 0.5,
+        backgroundColor: '$secondaryDarkLight',
         borderTopWidth: 2,
         borderTopColor: '$secondaryDark',
     },
