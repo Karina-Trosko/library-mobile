@@ -5,7 +5,7 @@ const windowsHeight = Dimensions.get('window').height - 90;
 
 export const list = EStyleSheet.create({
     listItem: {
-        marginHorizontal: 15,
+        marginHorizontal: '$mainMargin',
         paddingHorizontal: 5,
         paddingVertical: 8,
     },
@@ -17,7 +17,7 @@ export const list = EStyleSheet.create({
 
 export const listInfo = EStyleSheet.create({
     item: {
-        marginHorizontal: 15,
+        marginHorizontal: '$mainMargin',
         paddingVertical: 15,
         paddingHorizontal: 5,
         flexDirection: 'row'

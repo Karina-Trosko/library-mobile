@@ -7,7 +7,7 @@ export const Bunner = ({ title, subtitle }) => (
     <View>
         <View style={bunner.textBlock}>  
             <Title big>{title}</Title>
-            <SubTitle big>{subtitle}</SubTitle>
+            {subtitle ? <SubTitle big>{subtitle}</SubTitle> : null}
         </View>
         <Seporator/>
     </View>

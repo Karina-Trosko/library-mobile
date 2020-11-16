@@ -16,14 +16,13 @@ const BooksListItem = ({ item }) => (
 );
 
 export const BooksList = () => (
-    <View>
-        <Page>
-            <FlatList
-                data={exampleData} 
-                renderItem={BooksListItem}
-                keyExtractor={(item) => String(item.id)}
-                ItemSeparatorComponent={() => <Seporator />}
-            />
-        </Page>
-    </View>
+    <Page>
+        <FlatList
+            data={exampleData}
+            renderItem={BooksListItem}
+            keyExtractor={(item) => String(item.id)}
+            ItemSeparatorComponent={() => <Seporator />}
+        />
+    </Page>
+
 );

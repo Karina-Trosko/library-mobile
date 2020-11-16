@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { BooksList, Home, BookDetails } from '../screens';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { appHeader } from '../styles';
+import { SignIn, SignUp } from '../screens/Account';
 
 const AppNavigator = createStackNavigator({
   Home: {
@@ -21,6 +22,18 @@ const AppNavigator = createStackNavigator({
     screen: BookDetails,
     navigationOptions: {
       title: 'BookDetails',
+    }
+  },
+  SignIn: {
+    screen: SignIn,
+    navigationOptions: {
+      title: 'Sign in',
+    }
+  },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: {
+      title: 'Sign Up',
     }
   },
 },

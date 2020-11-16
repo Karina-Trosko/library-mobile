@@ -58,6 +58,11 @@ export const text = EStyleSheet.create({
     lightRed: {
         color: '$secondaryDark',
     },
+    link: {
+        color: '$primaryDark',
+        fontSize: 18,
+        textDecorationLine: 'underline',
+    },
 });
 
 export const separator = EStyleSheet.create({

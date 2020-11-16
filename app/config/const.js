@@ -38,4 +38,31 @@ export const bookDetailsFields = [
         name: 'erttyyuijhgjhg gggh',
         id: 'erttyyuijhgjhg gggh'
     },
-]
+];
+
+export const sighInFields = [
+    {
+        id: 'userName'
+    },
+    {
+        id: 'password'
+    }
+];
+
+export const signUpFields = [
+    {
+        id: 'userName'
+    },
+    {
+        id: 'password'
+    },
+    {
+        id: 'FirstName'
+    },
+    {
+        id: 'Surname'
+    },
+    {
+        id: 'contactDetails'
+    }
+];
