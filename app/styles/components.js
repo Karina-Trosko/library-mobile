@@ -58,6 +58,9 @@ export const text = EStyleSheet.create({
     lightRed: {
         color: '$secondaryDark',
     },
+    lightOrange: {
+        color: '$primaryLight',
+    },
     link: {
         color: '$primaryDark',
         fontSize: 18,
@@ -75,5 +78,12 @@ export const separator = EStyleSheet.create({
     },
     primaryLight: {
         backgroundColor: '$primaryLight',
+    },
+    longSeparator: {
+        backgroundColor: '$secondaryDark',
+        height: 2,
+        marginVertical: 1,
+        width: '100%',
+        alignSelf: 'center',
     },
 });

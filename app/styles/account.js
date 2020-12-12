@@ -6,4 +6,16 @@ export const account = EStyleSheet.create({
         marginHorizontal: '$mainMargin',
         marginTop: 40,
     },
+    listsContainer: {
+        marginHorizontal: '$mainMargin',
+        paddingBottom: 20
+    },
+    request: {
+        borderWidth: 2,
+        borderColor: '$primaryLight',
+        borderRadius: 3,
+        backgroundColor: '$absWhite',
+        padding: 10,
+        marginTop: '$mainMargin',
+    }
 });

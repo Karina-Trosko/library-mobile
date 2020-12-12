@@ -16,7 +16,7 @@ const BooksListItem = ({ item }) => (
 );
 
 export const BooksList = () => (
-    <Page>
+    <Page noScroll>
         <FlatList
             data={exampleData}
             renderItem={BooksListItem}

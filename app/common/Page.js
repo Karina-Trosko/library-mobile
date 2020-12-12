@@ -14,11 +14,14 @@ export class Page extends Component {
             <SafeAreaView>
                 <StatusBar barStyle="light-content" backgroundColor={EStyleSheet.value('$primaryDark')} />
                 <View style={list.listContainer}>
+                    {this.props.noScroll ? 
+                    this.props.children :
                     <KeyboardAwareScrollView>
                         <View>
                             {this.props.children}
                         </View>
                     </KeyboardAwareScrollView>
+                    }
                     {this.props.footer}
                 </View>
             </SafeAreaView>

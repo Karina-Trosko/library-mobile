@@ -2,8 +2,8 @@ import React from "react";
 import { Text, View } from "react-native";
 import { text } from '../styles';
 
-export const Title = ({ children, style = {}, big = false }) => (
-    <Text style={[big ? text.bigTitle : text.title, style]}>{children}</Text>
+export const Title = ({ children, style = {}, big = false, color }) => (
+    <Text style={[big ? text.bigTitle : text.title, text[color], style]}>{children}</Text>
 );
 
 export const SubTitle = ({ children, big = false, style, color, bold }) => (
