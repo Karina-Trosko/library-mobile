@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createStore } from 'redux';
-import { CHANGE_CATALOG_CONTENT, SETUP_AUTH_USER } from '../actions/constants';
+import { CHANGE_CATALOG_CONTENT, SETUP_AUTH_USER, SET_USER_REQUESTS } from '../actions/constants';
 
 function mainReducer(state = 0, action) {
     switch (action.type) {
@@ -8,6 +8,8 @@ function mainReducer(state = 0, action) {
             return { ...state, catalogContent: action.catalogContent }
         case SETUP_AUTH_USER:
             return { ...state, authUser: action.authUser }
+        case SET_USER_REQUESTS:
+            return { ...state, requests: action.requests }
         default:
             return state;
     }
