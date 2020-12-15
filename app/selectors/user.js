@@ -24,7 +24,7 @@ export const getRequests = createSelector(
             literatureType: e.book?.literatureType?.name,
         },
         id: e.id,
-        formatedDate: e.date ? new Date(e.date).toDateString() : '',
+        formatedDate: e.date ? e.date.split(' ')[0] : '',
     })
     )
 );
