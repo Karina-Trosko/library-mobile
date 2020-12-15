@@ -44,7 +44,7 @@ const AppNavigator = createStackNavigator({
   },
 },
 {
-  initialRouteName: 'Home',
+  initialRouteName: 'SignIn',
   defaultNavigationOptions: {
     headerStyle: appHeader.container,
     headerTintColor: EStyleSheet.value('$primaryLight'),

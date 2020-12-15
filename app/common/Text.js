@@ -1,4 +1,5 @@
 import React from "react";
+import { TouchableOpacity } from "react-native";
 import { Text, View } from "react-native";
 import { text } from '../styles';
 
@@ -21,6 +22,8 @@ export const BottomNotification = ({ notification }) => (
     </View>
 );
 
-export const Link = ({ title, style }) => (
-    <Text style={[text.link, style]}>{title}</Text>
+export const Link = ({ title, style, onPress }) => (
+    <TouchableOpacity onPress={onPress}>
+        <Text style={[text.link, style]}>{title}</Text>
+    </TouchableOpacity>
 );

@@ -9,7 +9,7 @@
     <item>
         <bitmap
             android:src="@drawable/libr_text"
-            android:gravity="center"
+            android:gravity="top"
             />
     </item>
 </layer-list>
