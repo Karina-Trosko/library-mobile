@@ -28,3 +28,13 @@ export const getRequests = createSelector(
     })
     )
 );
+
+export const getUsername = createSelector(
+    [getUserAuth],
+    (user = {}) => user.username
+);
+
+export const getUserId = createSelector(
+    [getUserAuth],
+    (user = {}) => user.id
+);

@@ -1,8 +1,10 @@
 import React from 'react';
 import { FlatList, TouchableOpacity } from 'react-native';
+import actions from '../../actions';
 import { Page, Title, SubTitle, Seporator } from '../../common';
 import { register } from '../../config/store';
 import { getContent } from '../../selectors/books';
+import { bookApi } from '../../services/api';
 import { list } from '../../styles';
 
 const BooksListItem = ({ item: { title, yearOfPublishing, authorFullName } = {}, onPress }) => (
@@ -17,7 +19,9 @@ export const BooksList = register(({ books, navigation }) => (
     <Page noScroll>
         <FlatList
             data={books}
-            renderItem={({ item }) => <BooksListItem item={item} onPress={() => navigation.navigate('BookDetails', { item })} />}
+            renderItem={({ item }) => <BooksListItem item={item} onPress={() => {
+                bookApi.getBook(item?.id, (res) => actions.updateBook(res));
+                navigation.navigate('BookDetails', { item }); }} />}
             keyExtractor={(item) => String(item.id)}
             ItemSeparatorComponent={() => <Seporator />}
         />

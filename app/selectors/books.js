@@ -11,3 +11,8 @@ export const getContent = createSelector(
     literatureType: e.literatureType?.name,
   }))
 );
+
+export const getBook = (id) => createSelector(
+  [getContent],
+  (content) => content.find(e => e.id === id)
+);

@@ -5,6 +5,8 @@ import { account } from '../../styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { register } from '../../config/store';
 import { getRequests } from '../../selectors/user';
+import { bookApi } from '../../services/api';
+import actions from '../../actions';
 
 const RequestItem = ({ item: { title, author, formatedDate } = {}, onPress }) => (
     <TouchableOpacity style={account.request} onPress={onPress}>
@@ -33,12 +35,17 @@ const RequestsList = ({ data = [], navigation }) => (
         contentContainerStyle={account.listsContainer}
         renderItem={({ item }) => <RequestItem
             item={item}
-            onPress={() => navigation.navigate('BookDetails', {
+            onPress={() => {
+                bookApi.getBook(item.book?.id, (res) => {
+                    console.log('updateBook: ', res);
+                    actions.updateBook(res);
+                });
+                navigation.navigate('BookDetails', {
                 item: item.book,
                 accept: item.accept,
                 send: item.send && !item.accept,
                 choosen: true,
-            })} />}
+            })}} />}
         keyExtractor={(item) => String(item.id)}
         renderSectionHeader={({ section: { title } = {} }) =>
             <View style={{ marginTop: 20 }}>

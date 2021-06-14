@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import { createStore } from 'redux';
-import { CHANGE_CATALOG_CONTENT, SETUP_AUTH_USER, SET_USER_REQUESTS } from '../actions/constants';
+import { CHANGE_CATALOG_CONTENT, SETUP_AUTH_USER, SET_USER_REQUESTS, UPDATE_BOOK,
+    CHOOSE_BOOK,
+} from '../actions/constants';
 
 function mainReducer(state = 0, action) {
     switch (action.type) {
@@ -10,6 +12,10 @@ function mainReducer(state = 0, action) {
             return { ...state, authUser: action.authUser }
         case SET_USER_REQUESTS:
             return { ...state, requests: action.requests }
+        case UPDATE_BOOK:
+            return {...state, catalogContent: Array.isArray(state.catalogContent) ? state.catalogContent?.map(e => e.id === action.book?.id ? action.book : e) : state.catalogContent }
+        case CHOOSE_BOOK:
+            return {...state, catalogContent: Array.isArray(state.catalogContent) ? state.catalogContent?.map(e => e.id === action.book?.id ? action.book : e) : state.catalogContent }
         default:
             return state;
     }
